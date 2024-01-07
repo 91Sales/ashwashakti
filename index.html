@@ -1,10 +1,10 @@
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
   <style>
     /* Add your custom CSS styles here */
 
@@ -17,13 +17,13 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-      z-index: 1000; /* Set a higher z-index to make sure it appears above other elements */
+      z-index: 1000;
     }
 
     /* Add padding to the body to prevent overlap with the fixed message */
     body {
       padding-bottom: 60px;
-      background-color:#D3D3D3; /* Adjust the value based on your message height */
+      background-color: #D3D3D3;
     }
 
     /* Style for hiding the form initially */
@@ -52,8 +52,9 @@
     .hero-section button {
       font-size: 18px;
     }
-    nav{
-        background-color:red;
+
+    nav {
+      background-color: red;
     }
   </style>
   <title>Your Health Products</title>
@@ -82,7 +83,31 @@
 </div>
 
 <!-- Hero Section -->
-<div class="hero-section"> <div class="slider"> <!-- Slide 1 - Doctor Recommendation --> <div> <img src="img/Image1.jpg" alt="Doctor" class="img-fluid"> <h2>Doctor Recommends Our Products!</h2> <p>Unlock the benefits of our health products recommended by top doctors. Improve your well-being today!</p> <a href="#form" class="btn btn-primary">Buy Now</a> </div> <!-- Slide 2 - 50% Off Product --> <div> <img src="img/product.jpg" alt="50% Off Product" class="img-fluid"> <h2>50% Off Limited Time Offer!</h2> <p>Get our special product at a discounted price. Limited stock available!</p> <a href="#form" class="btn btn-primary">Buy Now</a> </div> <!-- Slide 3 - Combo Offers --> <div> <img src="img/d6.jpg" alt="Combo Offers" class="img-fluid"> <h2>Exclusive Combo Offers!</h2> <p>Check out our exclusive combo offers. Limited stock available!</p> <a href="#form" class="btn btn-primary">Buy Now</a> </div> </div> </div>
+<div class="hero-section">
+  <div class="slider">
+    <!-- Slide 1 - Doctor Recommendation -->
+    <div>
+      <img src="doctor-photo.jpg" alt="Doctor" class="img-fluid">
+      <h2>Doctor Recommends Our Products!</h2>
+      <p>Unlock the benefits of our health products recommended by top doctors. Improve your well-being today!</p>
+      <a href="#form" class="btn btn-primary">Buy Now</a>
+    </div>
+    <!-- Slide 2 - 50% Off Product -->
+    <div>
+      <img src="product-50-off.jpg" alt="50% Off Product" class="img-fluid">
+      <h2>50% Off Limited Time Offer!</h2>
+      <p>Get our special product at a discounted price. Limited stock available!</p>
+      <a href="#form" class="btn btn-primary">Buy Now</a>
+    </div>
+    <!-- Slide 3 - Combo Offers -->
+    <div>
+      <img src="combo-offers.jpg" alt="Combo Offers" class="img-fluid">
+      <h2>Exclusive Combo Offers!</h2>
+      <p>Check out our exclusive combo offers. Limited stock available!</p>
+      <a href="#form" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+</div>
 
 <!-- User Form -->
 <div class="container mt-4" id="orderForm">
@@ -114,7 +139,7 @@
     <div class="col-md-4">
       <div class="card">
         <div class="card-body">
-          <img src="img/d1.jpg" alt="User 1" class="img-fluid rounded-circle mb-2" style="width: 50px; height: 50px;">
+          <img src="user1.jpg" alt="User 1" class="img-fluid rounded-circle mb-2" style="width: 50px; height: 50px;">
           <p class="card-text">"Great product! I've seen positive results in just a week."</p>
           <p class="card-text"><strong>- Happy Customer 1</strong></p>
           <!-- Star Rating -->
@@ -128,7 +153,7 @@
     <div class="col-md-4">
       <div class="card">
         <div class="card-body">
-          <img src="img/d2.jpg" alt="User 2" class="img-fluid rounded-circle mb-2" style="width: 50px; height: 50px;">
+          <img src="user2.jpg" alt="User 2" class="img-fluid rounded-circle mb-2" style="width: 50px; height: 50px;">
           <p class="card-text">"Highly recommend. Fast delivery and excellent quality."</p>
           <p class="card-text"><strong>- Satisfied Buyer</strong></p>
           <!-- Star Rating -->
@@ -142,7 +167,7 @@
     <div class="col-md-4">
       <div class="card">
         <div class="card-body">
-          <img src="img/d3.jpg" alt="User 3" class="img-fluid rounded-circle mb-2" style="width: 50px; height: 50px;">
+          <img src="user3.jpg" alt="User 3" class="img-fluid rounded-circle mb-2" style="width: 50px; height: 50px;">
           <p class="card-text">"These products have made a significant difference in my health."</p>
           <p class="card-text"><strong>- Another Happy Customer</strong></p>
           <!-- Star Rating -->
@@ -169,7 +194,7 @@
 <!-- Buy Product Card -->
 <div class="container mt-4">
   <div class="card">
-    <img src="img/product.jpg" class="card-img-top" alt="Product Card">
+    <img src="product-card.jpg" class="card-img-top" alt="Product Card">
     <div class="card-body">
       <h5 class="card-title">Special Offer!</h5>
       <p class="card-text">Buy our featured product at a discounted price. Limited time offer.</p>
@@ -177,28 +202,28 @@
     </div>
   </div>
 </div>
+
 <!-- Form Card -->
 <section id="form">
-<div class="container mt-4">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Order Form</h5>
-      <form onsubmit="submitForm(); return false;">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-        </div>
-        <div class="form-group">
-          <label for="number">Phone Number:</label>
-          <input type="tel" class="form-control" id="number" placeholder="Enter your phone number" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit Order</button>
-      </form>
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Order Form</h5>
+        <form onsubmit="submitForm(); return false;">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="number">Phone Number:</label>
+            <input type="tel" class="form-control" id="number" placeholder="Enter your phone number" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Order</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-</Section>
-     
+</section>
 
 <!-- Footer Section -->
 <footer class="bg-dark text-white mt-4">
@@ -210,14 +235,52 @@
   </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-iZlX3zR7PpFeMtwrk5TC2D/Uc5H9bSL25BUAW4bqKbB/EaG6I1fGkdS6J2HDtI1H" crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-</script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/> <!-- Your existing styles and title --> <!-- Add a script tag for Slick --> <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> <!-- Your existing scripts --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-iZlX3zR7PpFeMtwrk5TC2D/Uc5H9bSL25BUAW4bqKbB/EaG6I1fGkdS6J2HDtI1H" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Initialize Email.js
+  emailjs.init("user_your_emailjs_user_id");
+  
+  // Slick initialization
+  $(document).ready(function() {
+    $('.slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+  });
 
-<script> function openOrderForm() { document.getElementById('buyButton').style.display = 'none'; // Hide the "Buy Now" button document.getElementById('orderForm').style.display = 'block'; // Show the form card // Open a new window with the form (if needed) window.open('', 'OrderFormWindow', 'width=500,height=500'); }
-function openOrderForm() { document.getElementById('buyButton').style.display = 'none'; // Hide the "Buy Now" button document.getElementById('orderForm').style.display = 'block'; // Show the form card // Open a new window with the form (if needed) window.open('', 'OrderFormWindow', 'width=500,height=500'); } function submitForm() { // Add logic here to submit the form data (e.g., using AJAX to a server) // Display the success message document.getElementById('successMessage').style.display = 'block'; // Additional logic for sending an email (you may need server-side code for this) // Example: You can use a service like EmailJS to send emails from the client side }
- </script>
- 
- <script> // Add a document ready function for Slick initialization $(document).ready(function(){ $('.slider').slick({ // Add Slick settings and options here dots: true, infinite: true, speed: 500, slidesToShow: 1, slidesToScroll: 1, // Add more settings as needed }); }); // Function to submit the form and send an email function submitForm() { // Add logic here to submit the form data (e.g., using AJAX to a server) // Display the success message document.getElementById('successMessage').style.display = 'block'; // Additional logic for sending an email using EmailJS // Example: You can use a service like EmailJS to send emails from the client side emailjs.send("default_service", "template_id", { to_email: "91salesstore@gmail.com", // Add more template variables as needed (name, phone number, etc.) }) .then(function(response) { console.log("Email sent successfully", response); }, function(error) { console.log("Error sending email", error); }); } </script>
+  // Function to submit the form and send an email
+  function submitForm() {
+    // Add logic here to submit the form data using AJAX to a server
+    // Display the success message
+    document.getElementById('successMessage').style.display = 'block';
+
+    // Additional logic for sending an email using EmailJS
+    emailjs.send("your_service_id", "your_template_id", {
+      to_email: "your_email@example.com",
+      name: document.getElementById('name').value,
+      phoneNumber: document.getElementById('number').value,
+    })
+    .then(function(response) {
+      console.log("Email sent successfully", response);
+    }, function(error) {
+      console.log("Error sending email", error);
+    });
+
+    // Modify the WhatsApp link with form data
+    var name = document.getElementById('name').value;
+    var phoneNumber = document.getElementById('number').value;
+    var whatsappLink = "https://api.whatsapp.com/send?phone=8468966897&text=Order%20Details:%0AName:%20" + name + "%0APhone:%20" + phoneNumber;
+
+    // Open the WhatsApp link in a new tab
+    window.open(whatsappLink, '_blank');
+  }
+</script>
 </body>
 </html>
